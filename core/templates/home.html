@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lnag="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}KubeCenter{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>Kube Center</h1>
+    </header>
+
+    <main>
+        {% block content %}
+        <div>
+            <h2>A Kubernetes Portfolio Project</h2>
+            <p>Check out my GitHub https://github.com/HSchwag and LinkedIn www.linkedin.com/in/hunter-schwager-851413149</p>
+        </div>
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Hunter Schwager</p>
+    </footer>
+</body>
+</html>
