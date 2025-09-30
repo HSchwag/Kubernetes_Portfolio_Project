@@ -7,11 +7,15 @@
 {% block content %}
 <div class="center_parent">
     <div class="account_body">
-        <h2>Sign Up</h2>
+        <h2>Create an Account</h2>
+
+        {% if form.errors %}
+            <div class="error">{{ form.errors }}</div>
+        {% endif %}
 
         <form method="post">
             {% csrf_token %}
-            {{ form.as_p }}  <!-- Django automatically renders the username & password fields -->
+            {{ form.as_p }}
             <button type="submit">Sign Up</button>
         </form>
 

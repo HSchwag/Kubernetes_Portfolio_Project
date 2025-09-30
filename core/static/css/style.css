@@ -69,3 +69,8 @@ body {
   background: #666;
   width: 15%;
 }
+
+.error {
+    color: red;
+    margin-bottom: 1rem;
+}
