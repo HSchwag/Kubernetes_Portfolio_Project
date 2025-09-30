@@ -1,35 +1,15 @@
-{% load static %}
-<!DOCTYPE html>
+{% extends "base.html" %}
 
-<html lnag="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Kube Center{% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
-</head>
-<body>
-    <header>
-        <div class="menu_bar">
-            <div class="login_signup_button">
-                <p>Signup/Login</p>
-            </div>
-        </div>
-        <h1>{% block header %}Kube Center{% endblock %}</h1>
-    </header>
+{% block title %}Kube Center{% endblock %}
 
-    <main>
-        {% block content %}
+{% block header %}Kube Center{% endblock %}
+
+{% block content %}
         <div class="home_page_body">
             <h2>A Kubernetes Portfolio Project</h2>
             <p>Check out my GitHub https://github.com/HSchwag and LinkedIn www.linkedin.com/in/hunter-schwager-851413149</p>
         </div>
-        {% endblock %}
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Hunter Schwager</p>
-    </footer>
-</body>
-</html>
+        <div class="login_page_body">
+            <h2>Login</h2>
+        </div>
+{% endblock %}
