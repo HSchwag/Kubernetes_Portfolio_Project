@@ -2,11 +2,13 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login as auth_login
+import socket
 
 # Create your views here.
 
 def home(request):
-    return render(request, 'home.html')
+    hostname = socket.gethostname()
+    return render(request, 'home.html', {'hostname': hostname})
 
 def signup(request):
     if request.method == 'POST':
